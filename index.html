@@ -1,10 +1,187 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>My First GitHub Page</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Ink & Steel Tattoo Studio - Custom tattoos, piercings, consultations, and more in Los Angeles." />
+  <title>Ink & Steel Tattoo Studio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background: #0d0d0d;
+      color: #f5f5f5;
+      line-height: 1.6;
+    }
+    header {
+      background: #1a1a1a;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header h1 {
+      font-family: 'Anton', sans-serif;
+      font-size: 2rem;
+      color: crimson;
+    }
+    nav a {
+      color: #f5f5f5;
+      margin: 0 1rem;
+      text-decoration: none;
+    }
+    .hero {
+      background: url('https://source.unsplash.com/1600x800/?tattoo,studio') center/cover;
+      height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    .hero h2 {
+      font-size: 3rem;
+      color: #fff;
+      background: rgba(0,0,0,0.7);
+      padding: 1rem;
+    }
+    section {
+      padding: 3rem 2rem;
+    }
+    .artists, .gallery, .services, .aftercare, .testimonials, .contact {
+      background: #1a1a1a;
+      margin-bottom: 2rem;
+      border-radius: 8px;
+      padding: 2rem;
+    }
+    .artist-card {
+      background: #262626;
+      margin: 1rem 0;
+      padding: 1rem;
+      border-left: 4px solid crimson;
+    }
+    .gallery img {
+      width: 100%;
+      max-width: 300px;
+      margin: 1rem;
+      border: 2px solid #333;
+    }
+    .contact form {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+    .contact form input, .contact form textarea {
+      width: 100%;
+      padding: 0.5rem;
+      background: #333;
+      border: none;
+      color: #f5f5f5;
+    }
+    .contact form button {
+      grid-column: span 2;
+      background: crimson;
+      color: #fff;
+      border: none;
+      padding: 0.75rem;
+      cursor: pointer;
+    }
+    footer {
+      background: #000;
+      color: #777;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+    a.button {
+      background: crimson;
+      color: #fff;
+      padding: 0.75rem 1.5rem;
+      text-decoration: none;
+      border-radius: 4px;
+    }
+  </style>
 </head>
 <body>
-  <h1>Hello from GitHub Pages!</h1>
-  <p>This is your live website.</p>
+  <header>
+    <h1>Ink & Steel</h1>
+    <nav>
+      <a href="#artists">Artists</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#services">Services</a>
+      <a href="#aftercare">Aftercare</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Bold Ink. Clean Lines. Street Soul.<br><a href="#contact" class="button">Book a Consultation</a></h2>
+  </section>
+
+  <section class="artists" id="artists">
+    <h2>Our Artists</h2>
+    <div class="artist-card">
+      <h3>Marcus "Steel" Rodriguez</h3>
+      <p>Specialties: Traditional, Neo-Traditional</p>
+    </div>
+    <div class="artist-card">
+      <h3>Sarah Chen</h3>
+      <p>Specialties: Realism, Portraits</p>
+    </div>
+    <div class="artist-card">
+      <h3>Jake Thompson</h3>
+      <p>Specialties: Blackwork, Geometric</p>
+    </div>
+  </section>
+
+  <section class="gallery" id="gallery">
+    <h2>Gallery</h2>
+    <div style="display: flex; flex-wrap: wrap; justify-content: center;">
+      <img src="https://source.unsplash.com/300x300/?tattoo1" alt="Tattoo 1" />
+      <img src="https://source.unsplash.com/300x300/?tattoo2" alt="Tattoo 2" />
+      <img src="https://source.unsplash.com/300x300/?tattoo3" alt="Tattoo 3" />
+      <img src="https://source.unsplash.com/300x300/?tattoo4" alt="Tattoo 4" />
+    </div>
+  </section>
+
+  <section class="services" id="services">
+    <h2>Services</h2>
+    <ul>
+      <li>Custom Tattoos</li>
+      <li>Walk-in Tattoos</li>
+      <li>Piercings</li>
+      <li>Consultations</li>
+      <li>Cover-ups</li>
+      <li>Touch-ups</li>
+    </ul>
+  </section>
+
+  <section class="aftercare" id="aftercare">
+    <h2>Aftercare Instructions</h2>
+    <p>Wash gently with fragrance-free soap, pat dry, apply thin layer of healing ointment, avoid direct sunlight, swimming, and scratching. Follow our artist-specific instructions for best results.</p>
+  </section>
+
+  <section class="testimonials">
+    <h2>What Clients Say</h2>
+    <p>"Best experience ever! Super clean and professional." – Alex R.</p>
+    <p>"My custom sleeve came out better than I imagined." – Jess M.</p>
+  </section>
+
+  <section class="contact" id="contact">
+    <h2>Contact & Booking</h2>
+    <p>Phone: (555) 123-TATS<br>Address: 1247 Main Street, Los Angeles, CA 90210<br>Instagram: <a href="https://instagram.com/inkandsteeltattoo" target="_blank">@inkandsteeltattoo</a></p>
+    <form onsubmit="event.preventDefault(); alert('Consultation request sent!');">
+      <input type="text" placeholder="Name" required />
+      <input type="email" placeholder="Email" required />
+      <textarea rows="5" placeholder="Describe your idea or preferred artist" required></textarea>
+      <button type="submit">Submit Consultation Request</button>
+    </form>
+    <p><strong>Hours:</strong><br>Mon-Thu: 12pm–10pm<br>Fri-Sat: 12pm–12am<br>Sun: 12pm–8pm</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Ink & Steel Tattoo Studio. All rights reserved.</p>
+    <p>Follow us: <a href="https://instagram.com/inkandsteeltattoo" target="_blank">Instagram</a></p>
+  </footer>
 </body>
 </html>
+
